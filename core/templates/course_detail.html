@@ -142,70 +142,28 @@
 															<!-- lessons list [start] -->
 															<ul class="course-list sub-course-list">
 
+																{% for cu in details.video_set.all %}
 																<!-- lesson [start] -->
 																<li class="course-item">
 																	<h5 class="lesson-title">
-																		<a class="d-block tutspress-link" href="#">
+																		<a class="d-block tutspress-link" href="{{cu.video.url}}">
 																			<i class="far fa-file-alt"></i>
 																			<!-- lesson title -->
-																			<span class="title">فیلم آموزشی شماره 1</span>
+																			<span class="title">{{cu.title}}</span>
 																			<!-- state -->
+																		{% if cu.is_free %}
 																			<span class="lesson-state">پیش نمایش</span>
-																			<!-- duration -->
-																			<span class="lesson-duration">5 دقیقه</span>
-																		</a>
-																	</h5>
-																</li>
-																<!-- lesson [end] -->
-
-																<!-- lesson [start] -->
-																<li class="course-item">
-																	<h5 class="lesson-title">
-																		<a class="d-block tutspress-link" href="#">
-																			<i class="far fa-file-alt"></i>
-																			<!-- lesson title -->
-																			<span class="title">فیلم آموزشی شماره 2</span>
-																			<!-- state -->
-																			<span class="lesson-state">پیش نمایش</span>
-																			<!-- duration -->
-																			<span class="lesson-duration">15 دقیقه</span>
-																		</a>
-																	</h5>
-																</li>
-																<!-- lesson [end] -->
-
-																<!-- lesson [start] -->
-																<li class="course-item">
-																	<h5 class="lesson-title">
-																		<a class="d-block tutspress-link" href="#">
-																			<i class="far fa-file-alt"></i>
-																			<!-- lesson title -->
-																			<span class="title">فیلم آموزشی شماره 3</span>
-																			<!-- state -->
+																		{% else %}
 																			<span class="lesson-state"><i class="fas fa-lock"></i></span>
+																		{% endif %}
 																			<!-- duration -->
-																			<span class="lesson-duration">12 دقیقه</span>
+																			<span class="lesson-duration">{{cu.time}} دقیقه</span>
 																		</a>
 																	</h5>
 																</li>
-																<!-- lesson [end] -->
-
-																<!-- lesson [start] -->
-																<li class="course-item">
-																	<h5 class="lesson-title">
-																		<a class="d-block tutspress-link" href="#">
-																			<i class="far fa-file-alt"></i>
-																			<!-- lesson title -->
-																			<span class="title">فیلم آموزشی شماره 4</span>
-																			<!-- state -->
-																			<span class="lesson-state"><i class="fas fa-lock"></i></span>
-																			<!-- duration -->
-																			<span class="lesson-duration">45 دقیقه</span>
-																		</a>
-																	</h5>
 																</li>
 																<!-- lesson [end] -->
-
+																{% endfor %}
 	 														</ul>
 															<!-- lessons list [start] -->
 
