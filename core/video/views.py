@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,get_object_or_404
 from .models import Course
 from django.core.paginator import Paginator
 # Create your views here.
@@ -11,3 +11,11 @@ def home(request):
         'course':course
     }
     return render(request,'index.html',context)
+
+
+def detailview(request,id):
+    x = get_object_or_404(Course,id=id)
+    context ={
+        'details':x
+    }
+    return render(request,'course_detail.html',context)

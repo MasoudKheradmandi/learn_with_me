@@ -36,6 +36,8 @@ class Video(models.Model):
 
     video = models.FileField()
     info = RichTextField()
+    time = models.IntegerField(null=True)
+    is_free = models.BooleanField(default=False)
 
     def __str__(self):
         return self.title
