@@ -32,12 +32,13 @@
 							<div class="row">
 
 								<!-- course item 1 [start]-->
+								{% for cu in course %}
 								<div class="col-lg-4 col-md-6 col-12 filter programming">
 									<div class="single-course-box">
 										<div class="img-box">
 											<a href="course-detail.html" class="tutspress-link">
 												<!-- course image -->
-												<img class="single-course-img tutspress-transition-slow" src="assets/img/post/course-9.jpg" alt="course item">
+												<img class="single-course-img tutspress-transition-slow" src="{{cu.image.url}}" alt="course item">
 												<!-- course price -->
 												<span class="price">99000 تومان</span>
 											</a>
@@ -52,363 +53,26 @@
 												<li class="d-inline"><i class="fas fa-star"></i></li>
 											</ul>
 											<!-- course title -->
-											<h3 class="title"><a class="tutspress-link tutspress-bold-font" href="course-detail.html">ساخت فروشگاه آنلاین</a></h3>
+											<h3 class="title"><a class="tutspress-link tutspress-bold-font" href="course-detail.html">{{cu.name}}</a></h3>
 											<div class="course-meta mt-3">
 												<!-- teacher image -->
-												<div class="teacher-avatar">
-													<a href="#"><img class="avatar" src="assets/img/other/user-2.jpg" alt="teacher avatar"></a>
-												</div>
+												{% comment %} <div class="teacher-avatar">
+													<a href="#"><img class="avatar" src="{% static 'assets/img/other/user-2.jpg' %}" alt="teacher avatar"></a>
+												</div> {% endcomment %}
 												<!-- teacher name -->
 												<div class="teacher-name">
-													<a class="instructor-link tutspress-transition" href="course-detail.html"><h6 class="instructor">محسن محمدی</h6></a>
+													<a class="instructor-link tutspress-transition" href="course-detail.html"><h6 class="instructor">{{cu.Author}}</h6></a>
 												</div>
 												<!-- student count -->
 												<div class="student">
-													<i class="fas fa-user-graduate"></i>
-													<span class="text-dark">100</span>
+													
+													<span class="text-dark">{{cu.level}}</span>
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
-								<!-- course item 1 [end]-->
-
-								<!-- course item 2 [start]-->
-								<div class="col-lg-4 col-md-6 col-12 filter web-development">
-									<div class="single-course-box">
-										<div class="img-box">
-											<a href="course-detail.html" class="tutspress-link">
-												<!-- course image -->
-												<img class="single-course-img tutspress-transition-slow" src="assets/img/post/course-8.jpg" alt="course item">
-												<!-- course price -->
-												<span class="price">79000 تومان</span>
-											</a>
-										</div>
-										<div class="card-content-box">
-											<!-- course rate -->
-											<ul class="p-0">
-												<li class="d-inline"><i class="fas fa-star"></i></li>
-												<li class="d-inline"><i class="fas fa-star"></i></li>
-												<li class="d-inline"><i class="fas fa-star"></i></li>
-												<li class="d-inline"><i class="fas fa-star"></i></li>
-												<li class="d-inline"><i class="fas fa-star"></i></li>
-											</ul>
-											<!-- course title -->
-											<h3 class="title"><a class="tutspress-link tutspress-bold-font" href="course-detail.html">آموزش عکاسی از پایه</a></h3>
-											<div class="course-meta mt-3">
-												<!-- teacher image -->
-												<div class="teacher-avatar">
-													<a href="#"><img class="avatar" src="assets/img/other/user-1.jpg" alt="teacher avatar"></a>
-												</div>
-												<!-- teacher name -->
-												<div class="teacher-name">
-													<a class="instructor-link tutspress-transition" href="course-detail.html"><h6 class="instructor">نگار آقاملایی</h6></a>
-												</div>
-												<!-- student count -->
-												<div class="student">
-													<i class="fas fa-user-graduate"></i>
-													<span class="text-dark">55</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- course item 2 [end]-->
-
-								<!-- course item 3 [start]-->
-								<div class="col-lg-4 col-md-6 col-12 filter photography">
-									<div class="single-course-box">
-										<div class="img-box">
-											<a href="course-detail.html" class="tutspress-link">
-												<!-- course image -->
-												<img class="single-course-img tutspress-transition-slow" src="assets/img/post/course-7.jpg" alt="course item">
-												<!-- course price -->
-												<span class="price">199000 تومان</span>
-											</a>
-										</div>
-										<div class="card-content-box">
-											<!-- course rate -->
-											<ul class="p-0">
-												<li class="d-inline"><i class="fas fa-star"></i></li>
-												<li class="d-inline"><i class="fas fa-star"></i></li>
-												<li class="d-inline"><i class="fas fa-star"></i></li>
-												<li class="d-inline"><i class="fas fa-star"></i></li>
-												<li class="d-inline"><i class="fas fa-star"></i></li>
-											</ul>
-											<!-- course title -->
-											<h3 class="title"><a class="tutspress-link tutspress-bold-font" href="course-detail.html">برنامه نویسی سمت سرور</a></h3>
-											<div class="course-meta mt-3">
-												<!-- teacher image -->
-												<div class="teacher-avatar">
-													<a href="#"><img class="avatar" src="assets/img/other/user-3.jpg" alt="teacher avatar"></a>
-												</div>
-												<!-- teacher name -->
-												<div class="teacher-name">
-													<a class="instructor-link tutspress-transition" href="course-detail.html"><h6 class="instructor">یاسین احمدی</h6></a>
-												</div>
-												<!-- student count -->
-												<div class="student">
-													<i class="fas fa-user-graduate"></i>
-													<span class="text-dark">19</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- course item 3 [end]-->
-
-								<!-- course item 4 [start]-->
-								<div class="col-lg-4 col-md-6 col-12 filter graphic">
-									<div class="single-course-box">
-										<div class="img-box">
-											<a href="course-detail.html" class="tutspress-link">
-												<!-- course image -->
-												<img class="single-course-img tutspress-transition-slow" src="assets/img/post/course-6.jpg" alt="course item">
-												<!-- course price -->
-												<span class="price">69000 تومان</span>
-											</a>
-										</div>
-										<div class="card-content-box">
-											<!-- course rate -->
-											<ul class="p-0">
-												<li class="d-inline"><i class="fas fa-star"></i></li>
-												<li class="d-inline"><i class="fas fa-star"></i></li>
-												<li class="d-inline"><i class="fas fa-star"></i></li>
-												<li class="d-inline"><i class="fas fa-star"></i></li>
-												<li class="d-inline"><i class="fas fa-star"></i></li>
-											</ul>
-											<!-- course title -->
-											<h3 class="title"><a class="tutspress-link tutspress-bold-font" href="course-detail.html">موشن گرافیک مقدماتی</a></h3>
-											<div class="course-meta mt-3">
-												<!-- teacher image -->
-												<div class="teacher-avatar">
-													<a href="#"><img class="avatar" src="assets/img/other/user-4.jpg" alt="teacher avatar"></a>
-												</div>
-												<!-- teacher name -->
-												<div class="teacher-name">
-													<a class="instructor-link tutspress-transition" href="course-detail.html"><h6 class="instructor">محسن محمدی</h6></a>
-												</div>
-												<!-- student count -->
-												<div class="student">
-													<i class="fas fa-user-graduate"></i>
-													<span class="text-dark">19</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- course item 4 [end]-->
-
-								<!-- course item 5 [start]-->
-								<div class="col-lg-4 col-md-6 col-12 filter programming">
-									<div class="single-course-box">
-										<div class="img-box">
-											<a href="course-detail.html" class="tutspress-link">
-												<!-- course image -->
-												<img class="single-course-img tutspress-transition-slow" src="assets/img/post/course-5.jpg" alt="course item">
-												<!-- course price -->
-												<span class="price">139000 تومان</span>
-											</a>
-										</div>
-										<div class="card-content-box">
-											<!-- course rate -->
-											<ul class="p-0">
-												<li class="d-inline"><i class="fas fa-star"></i></li>
-												<li class="d-inline"><i class="fas fa-star"></i></li>
-												<li class="d-inline"><i class="fas fa-star"></i></li>
-												<li class="d-inline"><i class="fas fa-star"></i></li>
-												<li class="d-inline"><i class="fas fa-star"></i></li>
-											</ul>
-											<!-- course title -->
-											<h3 class="title"><a class="tutspress-link tutspress-bold-font" href="course-detail.html">امنیت وب سایت ها</a></h3>
-											<div class="course-meta mt-3">
-												<!-- teacher image -->
-												<div class="teacher-avatar">
-													<a href="#"><img class="avatar" src="assets/img/other/user-5.jpg" alt="teacher avatar"></a>
-												</div>
-												<!-- teacher name -->
-												<div class="teacher-name">
-													<a class="instructor-link tutspress-transition" href="course-detail.html"><h6 class="instructor">یاشار حسینی</h6></a>
-												</div>
-												<!-- student count -->
-												<div class="student">
-													<i class="fas fa-user-graduate"></i>
-													<span class="text-dark">25</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- course item 5 [end]-->
-
-								<!-- course item 6 [start]-->
-								<div class="col-lg-4 col-md-6 col-12 filter web-development">
-									<div class="single-course-box">
-										<div class="img-box">
-											<a href="course-detail.html" class="tutspress-link">
-												<!-- course image -->
-												<img class="single-course-img tutspress-transition-slow" src="assets/img/post/course-4.jpg" alt="course item">
-												<!-- course price -->
-												<span class="price">90000 تومان</span>
-											</a>
-										</div>
-										<div class="card-content-box">
-											<!-- course rate -->
-											<ul class="p-0">
-												<li class="d-inline"><i class="fas fa-star"></i></li>
-												<li class="d-inline"><i class="fas fa-star"></i></li>
-												<li class="d-inline"><i class="fas fa-star"></i></li>
-												<li class="d-inline"><i class="fas fa-star"></i></li>
-												<li class="d-inline"><i class="fas fa-star"></i></li>
-											</ul>
-											<!-- course title -->
-											<h3 class="title"><a class="tutspress-link tutspress-bold-font" href="course-detail.html">آموزش طراحی کارت ویزیت</a></h3>
-											<div class="course-meta mt-3">
-												<!-- teacher image -->
-												<div class="teacher-avatar">
-													<a href="#"><img class="avatar" src="assets/img/other/user-6.jpg" alt="teacher avatar"></a>
-												</div>
-												<!-- teacher name -->
-												<div class="teacher-name">
-													<a class="instructor-link tutspress-transition" href="course-detail.html"><h6 class="instructor">محسن محمدی</h6></a>
-												</div>
-												<!-- student count -->
-												<div class="student">
-													<i class="fas fa-user-graduate"></i>
-													<span class="text-dark">605</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- course item 6 [end]-->
-
-								<!-- course item 7 [start]-->
-								<div class="col-lg-4 col-md-6 col-12 filter branding">
-									<div class="single-course-box">
-										<div class="img-box">
-											<a href="course-detail.html" class="tutspress-link">
-												<!-- course image -->
-												<img class="single-course-img tutspress-transition-slow" src="assets/img/post/course-3.jpg" alt="course item">
-												<!-- course price -->
-												<span class="price">109000 تومان</span>
-											</a>
-										</div>
-										<div class="card-content-box">
-											<!-- course rate -->
-											<ul class="p-0">
-												<li class="d-inline"><i class="fas fa-star"></i></li>
-												<li class="d-inline"><i class="fas fa-star"></i></li>
-												<li class="d-inline"><i class="fas fa-star"></i></li>
-												<li class="d-inline"><i class="fas fa-star"></i></li>
-												<li class="d-inline"><i class="fas fa-star"></i></li>
-											</ul>
-											<!-- course title -->
-											<h3 class="title"><a class="tutspress-link tutspress-bold-font" href="course-detail.html">سئو و بهینه سازی محتوا</a></h3>
-											<div class="course-meta mt-3">
-												<!-- teacher image -->
-												<div class="teacher-avatar">
-													<a href="#"><img class="avatar" src="assets/img/other/user-7.jpg" alt="teacher avatar"></a>
-												</div>
-												<!-- teacher name -->
-												<div class="teacher-name">
-													<a class="instructor-link tutspress-transition" href="course-detail.html"><h6 class="instructor">محسن محمدی</h6></a>
-												</div>
-												<!-- student count -->
-												<div class="student">
-													<i class="fas fa-user-graduate"></i>
-													<span class="text-dark">19</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- course item 7 [end]-->
-
-								<!-- course item 8 [start]-->
-								<div class="col-lg-4 col-md-6 col-12 filter branding">
-									<div class="single-course-box">
-										<div class="img-box">
-											<a href="course-detail.html" class="tutspress-link">
-												<!-- course image -->
-												<img class="single-course-img tutspress-transition-slow" src="assets/img/post/course-2.jpg" alt="course item">
-												<!-- course price -->
-												<span class="price">59000 تومان</span>
-											</a>
-										</div>
-										<div class="card-content-box">
-											<!-- course rate -->
-											<ul class="p-0">
-												<li class="d-inline"><i class="fas fa-star"></i></li>
-												<li class="d-inline"><i class="fas fa-star"></i></li>
-												<li class="d-inline"><i class="fas fa-star"></i></li>
-												<li class="d-inline"><i class="fas fa-star"></i></li>
-												<li class="d-inline"><i class="fas fa-star"></i></li>
-											</ul>
-											<!-- course title -->
-											<h3 class="title"><a class="tutspress-link tutspress-bold-font" href="course-detail.html">دیجیتال مارکتینگ و برندسازی</a></h3>
-											<div class="course-meta mt-3">
-												<!-- teacher image -->
-												<div class="teacher-avatar">
-													<a href="#"><img class="avatar" src="assets/img/other/user-8.jpg" alt="teacher avatar"></a>
-												</div>
-												<!-- teacher name -->
-												<div class="teacher-name">
-													<a class="instructor-link tutspress-transition" href="course-detail.html"><h6 class="instructor">یاسین احمدی</h6></a>
-												</div>
-												<!-- student count -->
-												<div class="student">
-													<i class="fas fa-user-graduate"></i>
-													<span class="text-dark">89</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- course item 8 [end]-->
-
-								<!-- course item 9 [start]-->
-								<div class="col-lg-4 col-md-6 col-12 filter web-development">
-									<div class="single-course-box">
-										<div class="img-box">
-											<a href="course-detail.html" class="tutspress-link">
-												<!-- course image -->
-												<img class="single-course-img tutspress-transition-slow" src="{% static 'assets/img/post/course-1.jpg' %}" alt="course item">
-												<!-- course price -->
-												<span class="price">720000 تومان</span>
-											</a>
-										</div>
-										<div class="card-content-box">
-											<!-- course rate -->
-											<ul class="p-0">
-												<li class="d-inline"><i class="fas fa-star"></i></li>
-												<li class="d-inline"><i class="fas fa-star"></i></li>
-												<li class="d-inline"><i class="fas fa-star"></i></li>
-												<li class="d-inline"><i class="fas fa-star"></i></li>
-												<li class="d-inline"><i class="fas fa-star"></i></li>
-											</ul>
-											<!-- course title -->
-											<h3 class="title"><a class="tutspress-link tutspress-bold-font" href="course-detail.html">طراحی قالب های ریسپانسیو</a></h3>
-											<div class="course-meta mt-3">
-												<!-- teacher image -->
-												<div class="teacher-avatar">
-													<a href="#"><img class="avatar" src="{% static 'assets/img/other/user-13.jpg' %}" alt="teacher avatar"></a>
-												</div>
-												<!-- teacher name -->
-												<div class="teacher-name">
-													<a class="instructor-link tutspress-transition" href="course-detail.html"><h6 class="instructor">یاشار حسینی</h6></a>
-												</div>
-												<!-- student count -->
-												<div class="student">
-													<i class="fas fa-user-graduate"></i>
-													<span class="text-dark">59</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- course item 9 [end]-->
-
+								{% endfor %}
 							</div>
 						</div>
 						<!-- blog list [end] -->
@@ -417,10 +81,16 @@
 							<!-- pagination [start] -->
 							<nav class="pagination-box d-flex flex-row justify-content-around">
 								<ul class="pagination">
-									<li class="page-item active"><a href="#" class="page-link">1</a></li>
-									<li class="page-item"><a href="#" class="page-link">2</a></li>
-									<li class="page-item"><a href="#" class="page-link">3</a></li>
-									<li class="page-item"><a href="#" class="page-link"><i class="fas fa-arrow-right"></i></a></li>
+									{% if course.has_previous %}
+									<li class="page-item"><a href="?page={{ course.previous_page_number }}" class="page-link"><i class="fas fa-arrow-left"></i></a></li>
+									<li class="page-item"><a href="?page={{ course.previous_page_number }}" class="page-link">{{ course.previous_page_number }}</a></li>
+									{% endif %}
+									<li class="page-item active"><a class="page-link">{{ course.number }}</a></li>
+
+									{% if course.has_next %}
+									<li class="page-item"><a href="?page={{ course.next_page_number }}" class="page-link">{{ course.next_page_number }}</a></li>
+									<li class="page-item"><a href="?page={{ course.next_page_number }}" class="page-link"><i class="fas fa-arrow-right"></i></a></li>
+									{% endif %}
 								</ul>
 							</nav>
 							<!-- pagination [end] -->

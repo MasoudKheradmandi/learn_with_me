@@ -7,6 +7,7 @@ class Category(models.Model):
 
     def __str__(self):
         return self.name
+        
 class Course(models.Model):
     recorder = (
         ('AmirMasoud Kheradmandi','AmirMasoud Kheradmandi'),
@@ -30,7 +31,9 @@ class Course(models.Model):
 
 
 class Video(models.Model):
+    course = models.ForeignKey(Course,on_delete=models.CASCADE,null=True)
     title = models.CharField(max_length=150,verbose_name='نام ویدئو')
+
     video = models.FileField()
     info = RichTextField()
 
