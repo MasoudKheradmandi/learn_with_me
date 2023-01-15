@@ -1,0 +1,278 @@
+/*
+
+Responsive.css
+=============
+Template Name: Tutspress - Multipurpose Education HTML Template
+Template URI: http://me-design.ir
+Author:  ME-Design
+Version: 1.0.0
+
+/*------------------------------------------
+  Responsive Grid Media Queries
+--------------------------------------------*/
+
+/* ---- Start of max-width 1200px CSS ---- */
+
+@media only screen and (max-width :1200px) {
+	/* contact box (in footer) */
+	.contatct-box .icon-holder {
+		float: none;
+		font-size: 3rem;
+		text-align: center;
+		margin-bottom: 8px;
+	}
+	.contatct-box .col-lg-3 h6,
+	.contatct-box .col-lg-3 p {
+		text-align: center;
+	}
+	.cat-item-box .inner-box {
+		padding: 0 15px;
+	}
+	/* devider of sections */
+	#Events-section::after,
+	#latest-post-section::after,
+	#latest-course-section::after {
+		background-size: cover;
+	}
+	.single-page-wrapper::after {
+		background-size: cover;
+	}
+	.archive-page-wrapper > .page-header {
+		background-size: cover;
+	}
+	/* number of column homepage (in index-02.html) */
+	.home-download-item-box .masonry-box {
+		column-count: 4;
+	}
+	/* section's devider (in single pages) */
+	.single-page-wrapper::after {
+		bottom: -20px;
+	}
+}
+
+/* ---- Start of max-width 992px CSS ---- */
+
+@media only screen and (max-width :992px) {
+	/* header */
+	.top-header{
+		padding: 15px;
+	}
+	#top-navbar-menu .nav-link {
+		border-bottom: 1px solid #313131;
+		font-size: 13px;
+		padding: 16px 0 16px 10px;
+	}
+	#top-navbar-menu > .navbar-nav {
+		padding: 10px 0;
+	}
+	#tutspress-main-navigator .nav-link {
+		padding: 15px 5px;
+		border-bottom: 1px solid #e3e3e3;
+	}
+	.login-section {
+		position: absolute;
+		top: 20px;
+		right: 15px;
+	}
+	.navbar-toggler {
+		z-index: 99;
+	}
+	.tutspress-normal-menu,
+	.tutspress-mega-menu {
+		min-width: 100%;
+	}
+	.dropdown-menu.show {
+		border-top: none;
+	}
+	/* contact box (in footer) */
+	.contatct-box .icon-holder {
+		float: left;
+		font-size: 3.4rem;
+		text-align: left;
+	}
+	.contatct-box .col-lg-3 h6 {
+		margin-top: 15px !important;
+		text-align: left;
+	}
+	.contatct-box .col-lg-3 p {
+		text-align: left;
+	}
+	/* search form (in index.html) */
+	.search-form {
+		width: 95%;
+	}
+	/* devider of sections */
+	.search-row::after {
+		bottom: -2px;
+	}
+	.category-section::after {
+		bottom: -28px;
+	}
+	/* discount section (in index.html) */
+	#discounted-section{
+    background-size: cover;
+	}
+	/* events section (in index.html) */
+	.event-box-section > ul > li {
+		padding: 0;
+	}
+	/* number of column homepage (in index-02.html) */
+	.home-download-item-box .masonry-box {
+		column-count: 3;
+	}
+	.home-download-item-box {
+		padding: 75px 50px;
+	}
+	/* number of column (in downloaad-grid.html) */
+	.archive-download-item-box .masonry-box {
+		column-count: 3;
+	}
+	/* page header */
+	.page-header {
+		padding: 0 30px;
+	}
+	/* avatars (in comment) */
+	.comment-item .avatar {
+		max-width: 100%;
+	}
+	/* section's devider (in single pages) */
+	.single-page-wrapper::after {
+		bottom: -22px;
+	}
+	/* related items (in download-detail.html) */
+	.tutspress-hover-effect-1 h6 {
+		margin: 0;
+		width: 100%;
+		bottom: 42%;
+	}
+	/*counter items (in about-us.html)*/
+	.counter-item {
+		margin-bottom: 30px;
+	}
+}
+
+/* ---- Start of max-width 767px CSS ---- */
+
+@media only screen and (max-width :767px) {
+	/*logo (in header)*/
+	.logo-box {
+	  border-right: 0;
+		margin-bottom: 45px;
+	}
+	/* search section (in index.html) */
+	.search-row {
+		background-size: cover;
+	}
+	.search-form {
+		width: 100%;
+	}
+	/* event (in index.html) */
+	.event-item {
+		display: block;
+	}
+	.event-item .desc {
+		display: block;
+		width: 100%;
+		text-align: center !important;
+		padding: 15px;
+	}
+	.event-item .thumb {
+		margin: 0 auto 15px;
+		text-align: center;
+		display: block;
+	}
+	/* number of column homepage (in index-02.html) */
+	.home-download-item-box .masonry-box {
+		column-count: 2;
+	}
+	.home-download-item-box {
+		padding: 75px 30px;
+	}
+	/* number of column (in downloaad-grid.html) */
+	.archive-download-item-box .masonry-box {
+		column-count: 2;
+	}
+	/* main box of items (in blogs page) */
+	.main-items-box {
+		padding: 70px 20px;
+	}
+	/* author name (in single page) */
+	.author-post-box .name-author {
+		text-align: center;
+	}
+	.detailes-box > p {
+		text-align: center;
+	}
+	/* post's update date (in single page) */
+	.single-post .header .box-time > span:nth-child(2) {
+		display: block;
+		margin-top: 5px;
+	}
+	/* section's devider (in single pages) */
+	.single-page-wrapper::after {
+		bottom: -18px;
+	}
+	.reviews-content .content-box .comment-box {
+		padding: 5px;
+	}
+	/* course's information (in course-detail.htmls) */
+	.information-bar > .course-info-list {
+		display: block;
+	}
+	.information-bar > .course-info-list > .list-item {
+		flex: none;
+		margin-top: 20px;
+	}
+	.information-bar > .course-info-list > .list-item > .meta-info {
+		text-align: center;
+	}
+	/* related items (in download-detail.html) */
+	.tutspress-hover-effect-1 h6 {
+		bottom: 47%;
+	}
+	/*counter items (in about-us.html)*/
+	.counter-item {
+		margin-bottom: 50px;
+	}
+}
+
+/* ---- Start of max-width 540px CSS ---- */
+
+@media only screen and (max-width :540px) {
+	/* contact (in header) */
+	.right-box-header > .col-6 {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	/* number of column homepage (in index-02.html) */
+	.home-download-item-box .masonry-box {
+		column-count: 1;
+	}
+	/* number of column homepage (in download-grid.html) */
+	.archive-download-item-box .masonry-box {
+		column-count: 1;
+	}
+	.archive-download-item-box {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+/* ---- Start of min-width 992px CSS ---- */
+
+@media all and (min-width: 992px) {
+	/* submenu (in header) */
+	.navbar .nav-item .dropdown-menu {
+    display: none;
+  	}
+	.navbar .nav-item:hover .dropdown-menu {
+    display: block;
+  	}
+	#tutspress-main-navigator > .navbar-nav > .nav-item:nth-child(1) > .nav-link {
+	  padding-left: 0px;
+	}
+	/*search input (in home pages)*/
+	.tutspress-search-input {
+	  width: 50%;
+	}
+}
