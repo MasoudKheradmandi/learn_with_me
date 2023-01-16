@@ -8,3 +8,15 @@ class Footer(models.Model):
     telegram2 =  models.CharField(max_length=150,verbose_name='Erfan Telegram',null=True)
     email = models.EmailField(max_length=254)
 
+class NavOne(models.Model):
+    name = models.CharField(max_length=100,verbose_name='نام نوبار')
+    link = models.CharField(max_length=100,verbose_name='لینک نوبار',blank=True,null=True)    
+    def __str__(self):
+        return self.name
+
+class NavTwo(models.Model):
+    parent = models.ForeignKey(NavOne,on_delete=models.PROTECT)
+    name = models.CharField(max_length=100,verbose_name='نام نوبار')
+    link = models.CharField(max_length=100,verbose_name='لینک نوبار')    
+    def __str__(self):
+        return self.name
