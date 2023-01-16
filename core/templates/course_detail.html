@@ -89,7 +89,6 @@
 									<img class="img-fluid thumbnail" src="{{details.image.url}}" alt="آموزش برنامه نویسی سمت سرور">
 								</div>
 							</div>
-
 							<div class="single-course mt-4">
 								<div class="course-wrapper">
 
@@ -252,99 +251,25 @@
 															<!-- Comment list [start] -->
 															<ul class="comment-list">
 																<!-- Comment 1 [start] -->
+																{% for com in comments %}
 																<li class="comment-item">
 																	<div class="comment-inner-box p-4">
 																		<div class="row">
-																			<div class="col-2 text-center"><img class="avatar" src="assets/img/unknown-user.jpg" alt="avatar"></div>
+																			<div class="col-2 text-center"><img class="avatar" src="{% static 'assets/img/unknown-user.jpg' %}" alt="avatar"></div>
 																			<div class="col-10 p-0">
 																				<!-- Commenters Name -->
-																				<h6 class="tutspress-bold-font mb-1 text-dark">حسن میراحمدی</h6>
+																				<h6 class="tutspress-bold-font mb-1 text-dark">{{com.username}}</h6>
 																				<!-- Commenters Info -->
-																				<div class="">June 09, 2021 at 5:30 pm</div>
+																				<div class="">{{com.created}}</div>
 																				<!-- Comment text -->
-																				<p class="my-2">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</p>
-																				<div><a href="#" class="reply-btn tutspress-transition">پاسخ دادن</a></div>
+																				<p class="my-2">{{com.body}}</p>
+																				{% comment %} <div><a href="#" class="reply-btn tutspress-transition">پاسخ دادن</a></div> {% endcomment %}
 																			</div>
 																		</div>
 																	</div>
 																</li>
+																{% endfor %}
 																<!-- Comment 1 [end] -->
-
-																<!-- Comment 2 [start] -->
-																<li class="comment-item">
-																	<div class="comment-inner-box p-4">
-																		<div class="row">
-																			<div class="col-2 text-center"><img class="avatar" src="assets/img/unknown-user.jpg" alt="avatar"></div>
-																			<div class="col-10 p-0">
-																				<!-- Commenters Name -->
-																				<h6 class="tutspress-bold-font mb-1 text-dark">نگار آقاملایی</h6>
-																				<!-- Commenters Info -->
-																				<div class="">June 08, 2021 at 6:30 pm</div>
-																				<!-- Comment text -->
-																				<p class="my-2">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
-																				<div><a href="#" class="reply-btn tutspress-transition">پاسخ دادن</a></div>
-																			</div>
-																		</div>
-																	</div>
-																</li>
-																<!-- Comment 2 [end] -->
-
-																<!-- Comment 3 [start] -->
-																<li class="comment-item">
-																	<div class="comment-inner-box p-4">
-																		<div class="row">
-																			<div class="col-2 text-center"><img class="avatar" src="assets/img/unknown-user.jpg" alt="avatar"></div>
-																			<div class="col-10 p-0">
-																				<!-- Commenters Name -->
-																				<h6 class="tutspress-bold-font mb-1 text-dark">مهرسان عزیزی</h6>
-																				<!-- Commenters Info -->
-																				<div class="">June 07, 2021 at 11:30 am</div>
-																				<!-- Comment text -->
-																				<p class="my-2">موضوعی که در متن ذکر کردید بسیار محتمل و کاربردی است.</p>
-																				<div><a href="#" class="reply-btn tutspress-transition">پاسخ دادن</a></div>
-																			</div>
-																		</div>
-																	</div>
-																	<!-- replyed comment list [start] -->
-																	<ul class="comment-list reply">
-																		<!-- first replyed comment list (comment 4) [start] -->
-																		<li class="comment-item">
-																			<div class="comment-inner-box p-4">
-																				<div class="row">
-																					<div class="col-2 text-center"><img class="avatar" src="assets/img/unknown-user.jpg" alt="avatar"></div>
-																					<div class="col-10 p-0">
-																						<!-- Commenters Name -->
-																						<h6 class="tutspress-bold-font mb-1 text-dark">احمد عباسی</h6>
-																						<!-- Commenters Info -->
-																						<div class="">June 08, 2021 at 12:59 pm</div>
-																						<!-- Comment text -->
-																						<p class="my-2">باهاتون موافقم!</p>
-																						<div><a href="#" class="reply-btn tutspress-transition">پاسخ دادن</a></div>
-																					</div>
-																				</div>
-																			</div>
-																		</li>
-																		<!-- first replyed comment (comment 4) [end] -->
-																	</ul>
-																	<!-- replyed comment list [end] -->
-																</li>
-																<!-- Comment 3 [end] -->
-
-																<!-- Comment 5 [start] -->
-																<li class="comment-item">
-																	<div class="comment-inner-box p-4">
-																		<div class="row">
-																			<div class="col-2 text-center"><img class="avatar" src="assets/img/unknown-user.jpg" alt="avatar"></div>
-																			<div class="col-10 p-0">
-																				<h6 class="tutspress-bold-font mb-1 text-dark">احمد عباسی</h6>
-																				<div class="">June 09, 2021 at 5:30 pm</div>
-																				<p class="my-2">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
-																				<a href="#" class="reply-btn tutspress-transition">پاسخ دادن</a>
-																			</div>
-																		</div>
-																	</div>
-																</li>
-																<!-- Comment 5 [end] -->
 
 															</ul>
 															<!-- Comment list [end] -->
@@ -354,18 +279,21 @@
 																<h4 class="comment-title-section tutspress-bold-font">نظرات خود را با ما درمیان بگذارید</h4>
 															</div>
 															<!-- Comment Submit Form [start] -->
-															<form id="comment-form" action="#" class="row">
+															<form method='post' id="comment-form" action="" class="row">
+																{% csrf_token %}
+																<input name="course" type="hidden" value="{{details.id}}">
 																<div class="col-6 form-group px-2 position-rel">
 																	<div class="icon"><i class="far fa-envelope-open"></i></div>
-																	<input class="form-control input-box" type="text" name="name" placeholder="نام">
+
+																	{{comment_form.username}}
 																</div>
 																<div class="col-6 form-group px-2 position-rel">
 																	<div class="icon"><i class="far fa-user"></i></div>
-																	<input class="form-control input-box" type="email" name="email" placeholder="ایمیل">
+																	{{comment_form.email}}
 																</div>
 																<div class="col-12 form-group px-2 position-rel">
 																	<div class="icon-textarea"><i class="far fa-edit"></i></div>
-																	<textarea class="form-control textarea-box" rows="8" name="message" placeholder="نظر شما...."></textarea>
+																	{{comment_form.body}}
 																</div>
 																<div class="col-12 px-2 position-rel">
 																	<button class="btn btn-submit-comment" type="submit">ارسال پیام</button>
@@ -417,7 +345,16 @@
 										<span class="value">{{details.Author}}</span>
 									</li>
 
-									
+									<li class="item">
+										<div class="attr">
+											<i class="fas fa-language"></i>
+											<div class="property">
+											وضعیت دوره:
+											</div>
+										</div>
+										<!-- Language of course -->
+										<span class="value">{{details.status}}</span>
+									</li>
 
 									
 

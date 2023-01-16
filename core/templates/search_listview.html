@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+
+			<div class="archive-page-wrapper">
+
+				
+
+				<section class="container main-items-box">
+					<div class="row">
+
+						<!-- blog list [start] -->
+						<div class="col-12 mb-3">
+							<div class="row">
+
+								<!-- course item 1 [start]-->
+							{% if course %}	
+                                {% for cu in course %}
+								<div class="col-lg-4 col-md-6 col-12 filter programming">
+									<div class="single-course-box">
+										<div class="img-box">
+											<a href="course-detail.html" class="tutspress-link">
+												<!-- course image -->
+												<img class="single-course-img tutspress-transition-slow" src="{{cu.image.url}}" alt="course item">
+												<!-- course price -->
+												<span class="price">99000 تومان</span>
+											</a>
+										</div>
+										<div class="card-content-box">
+											<!-- course rate -->
+											<ul class="p-0">
+												<li class="d-inline"><i class="fas fa-star"></i></li>
+												<li class="d-inline"><i class="fas fa-star"></i></li>
+												<li class="d-inline"><i class="fas fa-star"></i></li>
+												<li class="d-inline"><i class="fas fa-star"></i></li>
+												<li class="d-inline"><i class="fas fa-star"></i></li>
+											</ul>
+											<!-- course title -->
+											<h3 class="title"><a class="tutspress-link tutspress-bold-font" href="course-detail.html">{{cu.name}}</a></h3>
+											<div class="course-meta mt-3">
+												<div class="teacher-name">
+													<a class="instructor-link tutspress-transition" href="course-detail.html"><h6 class="instructor">{{cu.Author}}</h6></a>
+												</div>
+												<!-- student count -->
+												<div class="student">
+													
+													<span class="text-dark">{{cu.level}}</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								{% endfor %}
+                            {% else %}
+                            <h3 class="title" ><a class="tutspress-link tutspress-bold-font" href="course-detail.html">دوره مورد نظر یافت نشد!!!</a></h3>
+                            {% endif %}
+							</div>
+						</div>
+						<!-- blog list [end] -->
+
+						
+					</div>
+				</section>
+			</div>
+{% endblock %}

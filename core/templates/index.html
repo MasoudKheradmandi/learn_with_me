@@ -9,17 +9,17 @@
 				<section id="search-box-section" class="search-row">
 					<div class="container">
 						<!-- Caption -->
-						<h3 class="text-light text-center mb-2 secondry-title-search animate__animated animate__bounceInDown">قالبی مناسب برای ارائه ی فایل های دانلودی</h3>
+						<h3 class="text-light text-center mb-2 secondry-title-search animate__animated animate__bounceInDown">دوره های آموزشی رایگان و منحصربفرد</h3>
 						<h2 class="text-center tutspress-black-font main-title-search animate__animated animate__fadeInLeft">دنبال چی میگردی؟</h2>
 						<div class="tutspress-searchbox">
-							<form action="#" method="get" class="search-form">
-								<input class="tutspress-search-input" type="text" placeholder="به دنبال چه فایلی هستی؟" name="filter_name" autocomplete="off"/>
+							<form action="{% url 'video:SearchView' %}" method="get" class="search-form">
+								<input class="tutspress-search-input" type="text" placeholder="دوره های آموزشی مدنظرتو پیدا کن" name="filter_name" autocomplete="off"/>
 								<button class="search-btn" type="submit" name="button">
 										<i class="fas fa-search"></i>
 								</button>
 							</form>
 						</div>
-						<p class="text-light text-center mt-2">بیش از 2 میلیون فایل دانلودی در حال حاضر موجود است!</p>
+						<p class="text-light text-center mt-2">آموزش هایی در همه سطوح</p>
 					</div>
 				</section>
 				<!-- page header [end] -->
@@ -36,7 +36,7 @@
 								<div class="col-lg-4 col-md-6 col-12 filter programming">
 									<div class="single-course-box">
 										<div class="img-box">
-											<a href="course-detail.html" class="tutspress-link">
+											<a href="{% url 'video:detailview' cu.id %}" class="tutspress-link">
 												<!-- course image -->
 												<img class="single-course-img tutspress-transition-slow" src="{{cu.image.url}}" alt="course item">
 												<!-- course price -->
@@ -53,7 +53,7 @@
 												<li class="d-inline"><i class="fas fa-star"></i></li>
 											</ul>
 											<!-- course title -->
-											<h3 class="title"><a class="tutspress-link tutspress-bold-font" href="course-detail.html">{{cu.name}}</a></h3>
+											<h3 class="title"><a class="tutspress-link tutspress-bold-font" href="{% url 'video:detailview' cu.id %}">{{cu.name}}</a></h3>
 											<div class="course-meta mt-3">
 												<!-- teacher image -->
 												{% comment %} <div class="teacher-avatar">
@@ -61,7 +61,7 @@
 												</div> {% endcomment %}
 												<!-- teacher name -->
 												<div class="teacher-name">
-													<a class="instructor-link tutspress-transition" href="course-detail.html"><h6 class="instructor">{{cu.Author}}</h6></a>
+													<a class="instructor-link tutspress-transition" href="#"><h6 class="instructor">{{cu.Author}}</h6></a>
 												</div>
 												<!-- student count -->
 												<div class="student">

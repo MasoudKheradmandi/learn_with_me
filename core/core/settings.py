@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'video',
     'ckeditor',
     'home',
+    'django_render_partial',
 ]
 
 MIDDLEWARE = [
