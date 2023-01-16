@@ -20,3 +20,10 @@ class NavTwo(models.Model):
     link = models.CharField(max_length=100,verbose_name='لینک نوبار')    
     def __str__(self):
         return self.name
+
+
+class HeaderDetail(models.Model):
+    logo = models.ImageField()
+    phone_number = models.CharField(max_length=15)
+    email = models.EmailField(max_length=254)
+    

@@ -44,7 +44,7 @@
             <!-- Logo [start] -->
             <div class="col-lg-3 col-md-4 col-12 logo-box">
                 <!-- INSERT YOUR LOGO HERE -->
-                <a href="index.html"><img class="tutspress-logo" src="{% static 'assets/img/tutspress-logo.png' %}" alt="Tutspress Logo"></a>
+                <a href="index.html"><img class="tutspress-logo" src="{{header.logo.url}}" alt="Tutspress Logo"></a>
                 <!-- <h1><a href="index.html">Tutspress</a></h1> -->
             </div>
             <!-- Logo [end]-->
@@ -60,15 +60,11 @@
 
                                 <!-- Telephone One [start]-->
                                 <div class="item">
-                                    <a href="tel:(+98)912-1234567" class="tutspress-transition info-bar-contact-link">+98-912-1234567</a>
+                                    <a href="tel:{{header.phone_number}}" class="tutspress-transition info-bar-contact-link">{{header.phone_number}}</a>
                                 </div>
                                 <!-- Telephone One [end]-->
 
-                                <!-- Telephone Two [start]-->
-                                <div class="item">
-                                    <a href="tel:(+98)937-1234567" class="tutspress-transition info-bar-contact-link">+98-937-1234567</a>
-                                </div>
-                                <!-- Telephone Two [end]-->
+                               
 
                             </div>
                         </div>
@@ -79,15 +75,9 @@
 
                                 <!-- E-mail One [start]-->
                                 <div class="item">
-                                    <a class="tutspress-transition info-bar-contact-link" href="mailto:info@me-design.ir">info@me-design.ir</a>
+                                    <a class="tutspress-transition info-bar-contact-link" href="mailto:{{header.email}}">{{header.email}}</a>
                                 </div>
                                 <!-- E-mail One [end]-->
-
-                                <!-- E-mail Two [start]-->
-                                <div class="item">
-                                    <a class="tutspress-transition info-bar-contact-link" href="mailto:sales@me-design.ir">sales@me-design.ir</a>
-                                </div>
-                                <!-- E-mail Two [end]-->
 
                             </div>
                         </div>

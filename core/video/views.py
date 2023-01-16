@@ -2,7 +2,7 @@ from django.shortcuts import render,get_object_or_404
 from django.contrib import messages
 from .models import Course,Comment
 from django.core.paginator import Paginator
-from home.models import Footer,NavOne,NavTwo
+from home.models import Footer,NavOne,HeaderDetail
 from .forms import CommentForm
 # Create your views here.
 def home(request):
@@ -57,6 +57,7 @@ def Search(request):
 
 def header(request):
     context = {
-        'nav_one':NavOne.objects.all()
+        'nav_one':NavOne.objects.all(),
+        'header':HeaderDetail.objects.all().last()
     }
     return render(request,'header.html',context)
