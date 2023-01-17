@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+			<div class="archive-page-wrapper">
+				<!-- page header [strat] -->
+				<section class="page-header">
+					<div class="container inner-box">
+						<!-- title [start] -->
+						<div class="title"><h2 class="page-title tutspress-bold-font">ورود</h2></div>
+						<!-- title [end] -->
+
+						<!-- Breadcrumb [start]-->
+						<div class="archive-breadcrumb-box">
+							<ul id="breadcrumbs" class="breadcrumb">
+								<li class="breadcrumb-item item-home"><a class="tutspress-link" href="index.html">خانه</a></li>
+								<li class="breadcrumb-item">ورود</li>
+							</ul>
+						</div>
+						<!-- Breadcrumb [end]-->
+					</div>
+				</section>
+				<!-- page header [end] -->
+
+				<section class="container main-items-box">
+					<div class="w-100 login-box">
+						<div class="inner-login-box">
+							<div class="tutspress-bold-font mb-4"><h4 class="text-center">ورود</h4></div>
+							<p class="text-muted text-register mb-1">با صفحات اجتماعی خود وارد شوید</p>
+
+							<!-- social media login button [start] -->
+							<div class="social-icons">
+								<a href="#"><i class="fab fa-facebook-f"></i> <span>Facebook</span></a>
+								<a href="#"><img class="login-google-icon" src="{% static 'assets/img/other/google-icon.svg' %}" alt="google icon"><span>Google</span></a>
+							</div>
+							<!-- social media login button [end] -->
+
+							<p class="text-muted text-register-or my-3">یا</p>
+
+							<!-- login form [start] -->
+							<form method='post' class="login-form" action="">
+								{% csrf_token %}
+								<!-- email & phone field [start] -->
+								<div class="sign-input-box">
+									<input type="text" placeholder="ایمیل یا شماره تماس" name="username" required>
+									<div class="icon"><i class="fas fa-user"></i></div>
+								</div>
+								<!-- email & phone field [start] -->
+
+								<!-- password field [start] -->
+								<div class="sign-input-box">
+									<input type="password" placeholder="پسورد" name="password" required>
+									<div class="icon"><i class="fas fa-lock"></i></div>
+								</div>
+								<!-- password field [start] -->
+
+								<!-- login options [start]-->
+								<div class="option-form">
+									<div class="check_box">
+										<input type="checkbox" name="remember">
+										<span>به خاطر بسپار</span>
+									</div>
+									<div class="forget-password">
+										<a class="tutspress-text" href="#">فراموشی رمزعبور</a>
+									</div>
+								</div>
+								<!-- login options [end]-->
+
+								<!-- login button [start] -->
+								<div class="sign-input-box button">
+									<input class="tutspress-bg-color" type="submit" value="ورود">
+								</div>
+								<!-- login button [end] -->
+
+								<div class="sign_up">
+									هنوز عضو نشدی؟
+									<a class="tutspress-text" href="register.html">همین حالا ثبت نام کن</a>
+								</div>
+
+							</form>
+							<!-- login form [end] -->
+						</div>
+					</div>
+				</section>
+			</div>
+{% endblock %}
