@@ -41,7 +41,7 @@ class Video(models.Model):
     course = models.ForeignKey(Course,on_delete=models.CASCADE,null=True)
     title = models.CharField(max_length=150,verbose_name='نام ویدئو')
 
-    video = models.FileField()
+    video = models.FileField(upload_to='videos/')
     time = models.IntegerField(null=True)
     is_free = models.BooleanField(default=False)
 

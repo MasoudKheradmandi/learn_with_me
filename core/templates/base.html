@@ -63,7 +63,22 @@
 			<!-- #custom JS -->
 			<script src="{% static 'js/custom.js' %}"></script>
 			<!-- JS [End]-->
-
+			<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+			<script>
+				{% for message in messages %}
+						{% if message.level == 40 %}
+						Swal.fire({
+							icon: 'error',
+							text: '{{message}}',
+						})
+						{% else %}
+						Swal.fire({
+							icon: 'success',
+							text: '{{message}}',
+						})
+						{% endif %}
+					{% endfor %}
+			</script>
 		</div>
 	</body>
 
