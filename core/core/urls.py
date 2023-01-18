@@ -22,6 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('video.urls')),
     path('',include('ckeditor_uploader.urls')),
+    path('', include('account.urls')),
 ]
 
 
